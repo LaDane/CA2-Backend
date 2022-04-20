@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package facades;
+package populators;
 
 import dtos.RenameMeDTO;
 import entities.RenameMe;
 import javax.persistence.EntityManagerFactory;
+
+import facades.FacadeExample;
 import utils.EMF_Creator;
 
 public class Populator {

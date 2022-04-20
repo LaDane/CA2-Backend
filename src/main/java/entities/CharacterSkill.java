@@ -299,4 +299,104 @@ public class CharacterSkill {
     public Character getCharacter() {
         return character;
     }
+
+    public void setStrength(Long strength) {
+        this.strength = strength;
+    }
+
+    public void setEndurance(Long endurance) {
+        this.endurance = endurance;
+    }
+
+    public void setIntelligence(Long intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public void setFinesse(Long finesse) {
+        this.finesse = finesse;
+    }
+
+    public void setPerception(Long perception) {
+        this.perception = perception;
+    }
+
+    public void setCharisma(Long charisma) {
+        this.charisma = charisma;
+    }
+
+    public void setInitiative(Long initiative) {
+        this.initiative = initiative;
+    }
+
+    public void setNerves(Long nerves) {
+        this.nerves = nerves;
+    }
+
+    public void setMelee(Long melee) {
+        this.melee = melee;
+    }
+
+    public void setThrowingString(Long throwingString) {
+        this.throwingString = throwingString;
+    }
+
+    public void setFirearms(Long firearms) {
+        this.firearms = firearms;
+    }
+
+    public void setSneak(Long sneak) {
+        this.sneak = sneak;
+    }
+
+    public void setFlatter(Long flatter) {
+        this.flatter = flatter;
+    }
+
+    public void setLie(Long lie) {
+        this.lie = lie;
+    }
+
+    public void setIntimidate(Long intimidate) {
+        this.intimidate = intimidate;
+    }
+
+    public void setTrade(Long trade) {
+        this.trade = trade;
+    }
+
+    public void setRepair(Long repair) {
+        this.repair = repair;
+    }
+
+    public void setTraps(Long traps) {
+        this.traps = traps;
+    }
+
+    public void setSurvival(Long survival) {
+        this.survival = survival;
+    }
+
+    public void setCrafting(Long crafting) {
+        this.crafting = crafting;
+    }
+
+    public void setScience(Long science) {
+        this.science = science;
+    }
+
+    public void setAlchemy(Long alchemy) {
+        this.alchemy = alchemy;
+    }
+
+    public void setMedical(Long medical) {
+        this.medical = medical;
+    }
+
+    public void setHistory(Long history) {
+        this.history = history;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
 }

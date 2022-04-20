@@ -89,3 +89,64 @@ Content-Type: application/json
     "history": 2
   }
 }
+
+###
+
+PUT http://localhost:8080/CA2_Back_End_war_exploded/api/character/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "characterName": "Bill Bob",
+  "characterLevel": 2,
+  "characterXp": 12,
+  "characterHp": 15,
+  "characterArmor": 42,
+  "characterAngles": 2,
+  "userName": "user",
+  "backgroundDTO": {
+    "id": 2
+  },
+  "characterSkillDTO": {
+    "id": 1,
+    "strength": 10,
+    "endurance": 40,
+    "intelligence": 80,
+    "finesse": 40,
+    "perception": 60,
+    "charisma": 20,
+    "initiative": 60,
+    "nerves": 90,
+    "melee": 10,
+    "throwingString": 90,
+    "firearms": 60,
+    "sneak": 40,
+    "flatter": 30,
+    "lie": 60,
+    "intimidate": 30,
+    "trade": 20,
+    "repair": 80,
+    "traps": 70,
+    "survival": 10,
+    "crafting": 20,
+    "science": 30,
+    "alchemy": 80,
+    "medical": 30,
+    "history": 20
+  }
+}
+
+###
+
+POST http://localhost:8080/CA2_Back_End_war_exploded/api/createuser
+Content-Type: application/json
+
+{
+  "username": "newuser2",
+  "password": "ne"
+}
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/background/populate
+Content-Type: application/json

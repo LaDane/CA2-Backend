@@ -1,13 +1,14 @@
-package utils;
+package populators;
 
 
 import entities.Role;
 import entities.User;
+import utils.EMF_Creator;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-public class SetupTestUsers {
+public class UserPopulator {
 
     public static void main(String[] args) {
 

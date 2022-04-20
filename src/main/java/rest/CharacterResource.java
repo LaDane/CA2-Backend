@@ -53,4 +53,17 @@ public class CharacterResource {
                 .entity(GSON.toJson(newCharacterDTO))
                 .build();
     }
+
+    @Path("{id}")
+    @PUT
+    @Produces({MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_JSON})
+    public Response update(@PathParam("id") long id, String jsonContext) throws NotFoundException {
+        CharacterDTO characterDTO = GSON.fromJson(jsonContext, CharacterDTO.class);
+        CharacterDTO updatedCharacterDTO = FACADE.update(characterDTO);
+        return Response
+                .ok("SUCCESS")
+                .entity(GSON.toJson(updatedCharacterDTO))
+                .build();
+    }
 }

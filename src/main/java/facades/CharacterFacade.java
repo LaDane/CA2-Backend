@@ -31,32 +31,7 @@ public class CharacterFacade {
     public CharacterDTO create(CharacterDTO dto) throws NotFoundException {
         User user = UserFacade.getUserFacade(emf).getUserByName(dto.getUserName());
         Background background = BackgroundFacade.getBackgroundFacade(emf).getById(dto.getBackgroundDTO().getId());
-        CharacterSkill characterSkill = new CharacterSkill(
-                dto.getCharacterSkillDTO().getStrength(),
-                dto.getCharacterSkillDTO().getEndurance(),
-                dto.getCharacterSkillDTO().getIntelligence(),
-                dto.getCharacterSkillDTO().getFinesse(),
-                dto.getCharacterSkillDTO().getPerception(),
-                dto.getCharacterSkillDTO().getCharisma(),
-                dto.getCharacterSkillDTO().getInitiative(),
-                dto.getCharacterSkillDTO().getNerves(),
-                dto.getCharacterSkillDTO().getMelee(),
-                dto.getCharacterSkillDTO().getThrowingString(),
-                dto.getCharacterSkillDTO().getFirearms(),
-                dto.getCharacterSkillDTO().getSneak(),
-                dto.getCharacterSkillDTO().getFlatter(),
-                dto.getCharacterSkillDTO().getLie(),
-                dto.getCharacterSkillDTO().getIntimidate(),
-                dto.getCharacterSkillDTO().getTrade(),
-                dto.getCharacterSkillDTO().getRepair(),
-                dto.getCharacterSkillDTO().getTraps(),
-                dto.getCharacterSkillDTO().getSurvival(),
-                dto.getCharacterSkillDTO().getCrafting(),
-                dto.getCharacterSkillDTO().getScience(),
-                dto.getCharacterSkillDTO().getAlchemy(),
-                dto.getCharacterSkillDTO().getMedical(),
-                dto.getCharacterSkillDTO().getHistory()
-        );
+        CharacterSkill characterSkill = CharacterSkillFacade.getCharacterSkillFacade(emf).generate(dto);
         Character character = new Character(
                 dto.getCharacterName(),
                 dto.getCharacterLevel(),
@@ -77,6 +52,34 @@ public class CharacterFacade {
             em.close();
         }
         return new CharacterDTO(character);
+    }
+
+    public CharacterDTO update(CharacterDTO dto) throws NotFoundException {
+        Character foundCharacter = getById(dto.getId());
+        CharacterSkill foundCharacterSkill = CharacterSkillFacade.getCharacterSkillFacade(emf).getById(dto.getCharacterSkillDTO().getId());
+
+        Character updatedCharacterValues = updateValues(foundCharacter, dto);
+
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            em.merge(updatedCharacterValues);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
+        return new CharacterDTO(updatedCharacterValues);
+    }
+
+    public Character updateValues(Character c, CharacterDTO dto) {
+        c.setCharacterName(dto.getCharacterName());
+        c.setCharacterLevel(dto.getCharacterLevel());
+        c.setCharacterXp(dto.getCharacterXp());
+        c.setCharacterHp(dto.getCharacterHp());
+        c.setCharacterArmor(dto.getCharacterArmor());
+        c.setCharacterAngles(dto.getCharacterAngles());
+        c.setCharacterSkill(CharacterSkillFacade.getCharacterSkillFacade(emf).updateValues(c.getCharacterSkill(), dto.getCharacterSkillDTO()));
+        return c;
     }
 
     public Character getById(Long id) throws NotFoundException {

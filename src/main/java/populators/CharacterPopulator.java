@@ -1,4 +1,4 @@
-package facades;
+package populators;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -6,6 +6,8 @@ import dtos.BackgroundDTO;
 import dtos.CharacterDTO;
 import dtos.CharacterSkillDTO;
 import errorhandling.NotFoundException;
+import facades.BackgroundFacade;
+import facades.CharacterFacade;
 import utils.EMF_Creator;
 
 import javax.persistence.EntityManagerFactory;

@@ -1,8 +1,10 @@
-package facades;
+package populators;
 
 import dtos.BackgroundAbilityDTO;
 import dtos.BackgroundDTO;
 import errorhandling.NotFoundException;
+import facades.BackgroundAbilityFacade;
+import facades.BackgroundFacade;
 import utils.EMF_Creator;
 import javax.persistence.EntityManagerFactory;
 

@@ -117,4 +117,40 @@ public class Character {
     public CharacterSkill getCharacterSkill() {
         return characterSkill;
     }
+
+    public void setCharacterName(String characterName) {
+        this.characterName = characterName;
+    }
+
+    public void setCharacterLevel(Long characterLevel) {
+        this.characterLevel = characterLevel;
+    }
+
+    public void setCharacterXp(Long characterXp) {
+        this.characterXp = characterXp;
+    }
+
+    public void setCharacterHp(Long characterHp) {
+        this.characterHp = characterHp;
+    }
+
+    public void setCharacterArmor(Long characterArmor) {
+        this.characterArmor = characterArmor;
+    }
+
+    public void setCharacterAngles(Long characterAngles) {
+        this.characterAngles = characterAngles;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setBackground(Background background) {
+        this.background = background;
+    }
+
+    public void setCharacterSkill(CharacterSkill characterSkill) {
+        this.characterSkill = characterSkill;
+    }
 }
