@@ -6,6 +6,9 @@ import errorhandling.NotFoundException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BackgroundFacade {
 
@@ -52,5 +55,15 @@ public class BackgroundFacade {
             em.close();
         }
         return background;
+    }
+
+    public List<BackgroundDTO> getAllBackgrounds() {
+        EntityManager em = emf.createEntityManager();
+        TypedQuery<Background> tq = em.createQuery("SELECT b FROM Background b", Background.class);
+        List<BackgroundDTO> dtos = new ArrayList<>();
+        for (Background b : tq.getResultList()) {
+            dtos.add(new BackgroundDTO(b));
+        }
+        return dtos;
     }
 }

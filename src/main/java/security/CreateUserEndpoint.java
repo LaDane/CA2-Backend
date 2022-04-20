@@ -1,5 +1,7 @@
 package security;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import entities.Role;
@@ -24,6 +26,7 @@ public class CreateUserEndpoint {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory();
     private static final UserFacade FACADE = UserFacade.getUserFacade(EMF);
+    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -40,18 +43,27 @@ public class CreateUserEndpoint {
         }
 
         if (FACADE.usernameExists(username)) {
+            JsonObject jo = new JsonObject();
+            jo.addProperty("status", "ERROR");
+            jo.addProperty("msg", "Username already exists");
             return Response
-                    .ok("Username already exists")
+                    .ok(GSON.toJson(jo))
                     .build();
         }
         if (username.length() < 5) {
+            JsonObject jo = new JsonObject();
+            jo.addProperty("status", "ERROR");
+            jo.addProperty("msg", "Username must be longer than 5 characters");
             return Response
-                    .ok("Username must be longer than 5 characters")
+                    .ok(GSON.toJson(jo))
                     .build();
         }
         if (password.length() < 5) {
+            JsonObject jo = new JsonObject();
+            jo.addProperty("status", "ERROR");
+            jo.addProperty("msg", "Password must be longer than 5 characters");
             return Response
-                    .ok("Password must be longer than 5 characters")
+                    .ok(GSON.toJson(jo))
                     .build();
         }
 
@@ -67,8 +79,12 @@ public class CreateUserEndpoint {
         } finally {
             em.close();
         }
+
+        JsonObject jo = new JsonObject();
+        jo.addProperty("status", "SUCCESS");
+        jo.addProperty("msg", "Signup successful");
         return Response
-                .ok("SUCCESS")
+                .ok(GSON.toJson(jo))
                 .build();
     }
 }

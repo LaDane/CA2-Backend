@@ -5,6 +5,7 @@ import errorhandling.NotFoundException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
 
 public class RoleFacade {
 
@@ -34,4 +35,10 @@ public class RoleFacade {
         }
         return role;
     }
+
+//    public Role getRoleByUsername(String username) throws NotFoundException {
+//        EntityManager em = emf.createEntityManager();
+//        Role role;
+//        TypedQuery<Role> tq = em.createQuery("SELECT r FROM User.roleList u WHERE ")
+//    }
 }
