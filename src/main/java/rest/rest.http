@@ -1,4 +1,4 @@
-POST http://localhost:8080/devops_starter_war_exploded/api/login
+POST http://localhost:8080/CA2_Back_End_war_exploded/api/login
 Content-Type: application/json
 
 {
@@ -6,3 +6,86 @@ Content-Type: application/json
   "password": "test"
 }
 
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/dice/d4
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/dice/d6
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/dice/d8
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/dice/d10
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/dice/d12
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/dice/d20
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/character/2
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/character/user
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/CA2_Back_End_war_exploded/api/character
+Content-Type: application/json
+
+{
+  "characterName": "Character Name",
+  "characterLevel": 1,
+  "characterXp": 1,
+  "characterHp": 10,
+  "characterArmor": 5,
+  "characterAngles": 4,
+  "userName": "user",
+  "backgroundDTO": {
+    "id": 5
+  },
+  "characterSkillDTO": {
+    "strength": 1,
+    "endurance": 4,
+    "intelligence": 8,
+    "finesse": 4,
+    "perception": 6,
+    "charisma": 2,
+    "initiative": 6,
+    "nerves": 9,
+    "melee": 1,
+    "throwingString": 9,
+    "firearms": 6,
+    "sneak": 4,
+    "flatter": 3,
+    "lie": 6,
+    "intimidate": 3,
+    "trade": 2,
+    "repair": 8,
+    "traps": 7,
+    "survival": 1,
+    "crafting": 2,
+    "science": 3,
+    "alchemy": 8,
+    "medical": 3,
+    "history": 2
+  }
+}

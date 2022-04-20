@@ -3,6 +3,8 @@ package facades;
 import entities.User;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+
+import errorhandling.NotFoundException;
 import security.errorhandling.AuthenticationException;
 
 /**
@@ -37,4 +39,17 @@ public class UserFacade {
         return user;
     }
 
+    public User getUserByName(String username) throws NotFoundException {
+        EntityManager em = emf.createEntityManager();
+        User user;
+        try {
+            user = em.find(User.class, username);
+            if (user == null) {
+                throw new NotFoundException("No user with this name exists");
+            }
+        } finally {
+            em.close();
+        }
+        return user;
+    }
 }
