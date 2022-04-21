@@ -29,7 +29,8 @@ public class BackgroundFacade {
         Background background = new Background(
                 dto.getBackgroundName(),
                 dto.getBackgroundMorale(),
-                dto.getBackgroundDescription()
+                dto.getBackgroundDescription(),
+                dto.getBackgroundImg()
         );
         EntityManager em = emf.createEntityManager();
 

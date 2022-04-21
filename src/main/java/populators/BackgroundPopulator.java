@@ -22,7 +22,8 @@ public class BackgroundPopulator {
         BackgroundDTO lejesoldat = new BackgroundDTO(
                 "Lejesoldat",
                 "Neutral Upartisk",
-                "Lejesoldaten er en kold og kynisk kriger. De bruger deres viden inden for krigsførelse til at skabe en tilværelse domineret af kamp og konflikt. Dog er deres evner til at interagere med andre mennesker forværret, da krig sjældent tillader lange og meningsfulde samtaler."
+                "Lejesoldaten er en kold og kynisk kriger. De bruger deres viden inden for krigsførelse til at skabe en tilværelse domineret af kamp og konflikt. Dog er deres evner til at interagere med andre mennesker forværret, da krig sjældent tillader lange og meningsfulde samtaler.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966585405447209000/Lejesoldat.png"
         );
         BackgroundDTO lejesoldatDTO = bFacade.create(lejesoldat);
         BackgroundAbilityDTO lejesoldatA1 = new BackgroundAbilityDTO(
@@ -41,7 +42,8 @@ public class BackgroundPopulator {
         BackgroundDTO samarit = new BackgroundDTO(
                 "Samarit",
                 "Pragmatisk Ideolog",
-                "Omvandrende Samaritter plejer tit deres erhverv i krigshærgede eller lovløse områder. Oftest er de tidligere læger fra mindre landsbyer, eller simple godhjertede sjæle der er drevet til at hjælpe deres næste."
+                "Omvandrende Samaritter plejer tit deres erhverv i krigshærgede eller lovløse områder. Oftest er de tidligere læger fra mindre landsbyer, eller simple godhjertede sjæle der er drevet til at hjælpe deres næste.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966585559004885012/Samarit.png"
         );
         BackgroundDTO samaritDTO = bFacade.create(samarit);
         BackgroundAbilityDTO samaritA1 = new BackgroundAbilityDTO(
@@ -59,7 +61,8 @@ public class BackgroundPopulator {
         BackgroundDTO mutant = new BackgroundDTO(
                 "Mutant",
                 "Upartisk Neutral",
-                "Mutanter er et alment syn på Gaia og iblandt dem er “Brødet” den mest udbredte art. Disse store og muskuløse spektakler bliver ofte brugt som beskyttelse eller arbejdskraft af folk der ved hvordan man bedst bruger deres “unikke kvalifikationer.”"
+                "Mutanter er et alment syn på Gaia og iblandt dem er “Brødet” den mest udbredte art. Disse store og muskuløse spektakler bliver ofte brugt som beskyttelse eller arbejdskraft af folk der ved hvordan man bedst bruger deres “unikke kvalifikationer.”",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966585698985607200/Mutant.png"
         );
         BackgroundDTO mutantDTO = bFacade.create(mutant);
         BackgroundAbilityDTO mutantA1 = new BackgroundAbilityDTO(
@@ -72,7 +75,8 @@ public class BackgroundPopulator {
         BackgroundDTO tekker = new BackgroundDTO(
                 "Tekker",
                 "Impulsiv Neutral",
-                "En Tekker lever og dør for teknologien de søger. Disse personer er tit tidligere prospektere der har indset at værdien ikke ligger i de almene materialer, men i de mange stadig fungerende stykker teknologi der kan samles og sælges for stor profit. Mange er på grund af deres mange interaktioner med Søgerne og andre technofile grupper selv blevet næsten religiøse."
+                "En Tekker lever og dør for teknologien de søger. Disse personer er tit tidligere prospektere der har indset at værdien ikke ligger i de almene materialer, men i de mange stadig fungerende stykker teknologi der kan samles og sælges for stor profit. Mange er på grund af deres mange interaktioner med Søgerne og andre technofile grupper selv blevet næsten religiøse.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586008323915816/Tekker.png"
         );
         BackgroundDTO tekkerDTO = bFacade.create(tekker);
         BackgroundAbilityDTO tekkerA1 = new BackgroundAbilityDTO(
@@ -90,7 +94,8 @@ public class BackgroundPopulator {
         BackgroundDTO krybskytte = new BackgroundDTO(
                 "Krybskytte",
                 "Neutral Afvigende",
-                "Siden tidernes morgen har mennesket jaget, dette ændrede sig ikke da vi drog ud mellem stjernerne. Krybskytten har brugt sit liv i vildmarken, både som jæger og som bytte."
+                "Siden tidernes morgen har mennesket jaget, dette ændrede sig ikke da vi drog ud mellem stjernerne. Krybskytten har brugt sit liv i vildmarken, både som jæger og som bytte.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586141535002634/Krybsskytte.jpg.png"
         );
         BackgroundDTO krybskytteDTO = bFacade.create(krybskytte);
         BackgroundAbilityDTO krybskytteA1 = new BackgroundAbilityDTO(
@@ -108,7 +113,8 @@ public class BackgroundPopulator {
         BackgroundDTO landevejsrover = new BackgroundDTO(
                 "Landevejsrøver",
                 "Impulsiv Afvigende",
-                "Sønderlandet og hele Gaia er plaget af gemene banditter der ligger på lur langs befærdede veje. De berøver folk for alt hvad de er værd og nogen gange ender det med at offeret også må bøde med livet. Nogle af disse lovløse lever således af nødvendighed, mens andre ser det som naturens love."
+                "Sønderlandet og hele Gaia er plaget af gemene banditter der ligger på lur langs befærdede veje. De berøver folk for alt hvad de er værd og nogen gange ender det med at offeret også må bøde med livet. Nogle af disse lovløse lever således af nødvendighed, mens andre ser det som naturens love.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586267141816361/Landvejsrver.png"
         );
         BackgroundDTO landevejsroverDTO = bFacade.create(landevejsrover);
         BackgroundAbilityDTO landevejsroverA1 = new BackgroundAbilityDTO(
@@ -126,7 +132,8 @@ public class BackgroundPopulator {
         BackgroundDTO vandrer = new BackgroundDTO(
                 "Vandrer",
                 "Upartisk Neutral",
-                "Utallige Vandrere søger et bedre liv når deres gamle er gået dem til halsen, eller er blevet dem berøvet. Disse retningsløse sjæle søger altid over den næste horisont hvor græsset forhåbentligt er grønnere og vandet… mindre grønt."
+                "Utallige Vandrere søger et bedre liv når deres gamle er gået dem til halsen, eller er blevet dem berøvet. Disse retningsløse sjæle søger altid over den næste horisont hvor græsset forhåbentligt er grønnere og vandet… mindre grønt.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586387182788678/Vandrer.png"
         );
         BackgroundDTO vandrerDTO = bFacade.create(vandrer);
         BackgroundAbilityDTO vandrerA1 = new BackgroundAbilityDTO(
@@ -144,7 +151,8 @@ public class BackgroundPopulator {
         BackgroundDTO beskytter = new BackgroundDTO(
                 "Beskytter",
                 "Impulsiv Ideolog",
-                "Bestyktteren er en lavløs monster-jæger. Disse fromme og fanatiske sjæle opsøger ofte Mutanter eller de Udødelige med intentioner om at udslette disse vanskabninger for andres sikkerhed. Disse ildsjæle er oftest lav løse på grund af deres “ekstreme” synspunkter."
+                "Bestyktteren er en lavløs monster-jæger. Disse fromme og fanatiske sjæle opsøger ofte Mutanter eller de Udødelige med intentioner om at udslette disse vanskabninger for andres sikkerhed. Disse ildsjæle er oftest lav løse på grund af deres “ekstreme” synspunkter.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586496788365322/Beskytter.png"
         );
         BackgroundDTO beskytterDTO = bFacade.create(beskytter);
         BackgroundAbilityDTO beskytterA1 = new BackgroundAbilityDTO(
@@ -162,7 +170,8 @@ public class BackgroundPopulator {
         BackgroundDTO prospektor = new BackgroundDTO(
                 "Prospektor",
                 "Upartisk Neutral",
-                "For en prospektor kan selv et glasskår have værdig. Disse opportunistiske handelsmænd rumstere rundt i Gaias utallige ruiner i søgen efter revl og krat, alt hvad der ikke er boltet til gulvet kan sælges og alt hvad der kan sælges; skal sælges."
+                "For en prospektor kan selv et glasskår have værdig. Disse opportunistiske handelsmænd rumstere rundt i Gaias utallige ruiner i søgen efter revl og krat, alt hvad der ikke er boltet til gulvet kan sælges og alt hvad der kan sælges; skal sælges.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586659871289344/Prospektor.png"
         );
         BackgroundDTO prospektorDTO = bFacade.create(prospektor);
         BackgroundAbilityDTO prospektorA1 = new BackgroundAbilityDTO(
@@ -180,7 +189,8 @@ public class BackgroundPopulator {
         BackgroundDTO slyngel = new BackgroundDTO(
                 "Slyngel",
                 "Impulsive Afvigende",
-                "Gaia er høg over høg, hvis man ikke passer på sig selv, vil ingen andre gøre det for dig. Slyngen har indset dette faktum og bruger andres godhed til sin fordel. Dog er de langt fra troværdige i aspekt og rygter rejser med vinden."
+                "Gaia er høg over høg, hvis man ikke passer på sig selv, vil ingen andre gøre det for dig. Slyngen har indset dette faktum og bruger andres godhed til sin fordel. Dog er de langt fra troværdige i aspekt og rygter rejser med vinden.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586766851178526/Slyngel.png"
         );
         BackgroundDTO slyngelDTO = bFacade.create(slyngel);
         BackgroundAbilityDTO slyngelA1 = new BackgroundAbilityDTO(
@@ -198,7 +208,8 @@ public class BackgroundPopulator {
         BackgroundDTO pioneren = new BackgroundDTO(
                 "Pioneren",
                 "Upartisk Neutral",
-                "Ethvert samfund er skabt af dem der tager de første skridt. Pioneren er en de brave sjæle der baner vejen for civilisationen på Gaia, trods planetens ønske om at sætte en stopper for menneskets fremmarch."
+                "Ethvert samfund er skabt af dem der tager de første skridt. Pioneren er en de brave sjæle der baner vejen for civilisationen på Gaia, trods planetens ønske om at sætte en stopper for menneskets fremmarch.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586852511453194/Pioneren.png"
         );
         BackgroundDTO pionerenDTO = bFacade.create(pioneren);
         BackgroundAbilityDTO pionerenA1 = new BackgroundAbilityDTO(
@@ -216,7 +227,8 @@ public class BackgroundPopulator {
         BackgroundDTO charlatan = new BackgroundDTO(
                 "Charlatan",
                 "Impulsiv Neutral",
-                "Charlatanen har brugt sine sociale evner til at overleve der hvor andre havde brugt deres nævner. En tunge af sølv og et hjerte af kul kan føre mange frem i livet; i det lange løb handler det om at overleve… kost det hvad det vil."
+                "Charlatanen har brugt sine sociale evner til at overleve der hvor andre havde brugt deres nævner. En tunge af sølv og et hjerte af kul kan føre mange frem i livet; i det lange løb handler det om at overleve… kost det hvad det vil.",
+                "https://cdn.discordapp.com/attachments/910894864265269318/966586940231147540/Charlatan.png"
         );
         BackgroundDTO charlatanDTO = bFacade.create(charlatan);
         BackgroundAbilityDTO charlatanA1 = new BackgroundAbilityDTO(

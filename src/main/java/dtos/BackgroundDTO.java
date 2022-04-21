@@ -12,18 +12,21 @@ public class BackgroundDTO {
     private String backgroundName;
     private String backgroundMorale;
     private String backgroundDescription;
+    private String backgroundImg;
     private List<BackgroundAbilityDTO> backgroundAbilities = new ArrayList<>();
 
-    public BackgroundDTO(String backgroundName, String backgroundMorale, String backgroundDescription) {
+    public BackgroundDTO(String backgroundName, String backgroundMorale, String backgroundDescription, String backgroundImg) {
         this.backgroundName = backgroundName;
         this.backgroundMorale = backgroundMorale;
         this.backgroundDescription = backgroundDescription;
+        this.backgroundImg = backgroundImg;
     }
 
-    public BackgroundDTO(String backgroundName, String backgroundMorale, String backgroundDescription, List<BackgroundAbilityDTO> backgroundAbilities) {
+    public BackgroundDTO(String backgroundName, String backgroundMorale, String backgroundDescription, String backgroundImg, List<BackgroundAbilityDTO> backgroundAbilities) {
         this.backgroundName = backgroundName;
         this.backgroundMorale = backgroundMorale;
         this.backgroundDescription = backgroundDescription;
+        this.backgroundImg = backgroundImg;
         this.backgroundAbilities = backgroundAbilities;
     }
 
@@ -34,6 +37,7 @@ public class BackgroundDTO {
         this.backgroundName = background.getBackgroundName();
         this.backgroundMorale = background.getBackgroundMorale();
         this.backgroundDescription = background.getBackgroundDescription();
+        this.backgroundImg = background.getBackgroundImg();
         for (BackgroundAbility ba : background.getBackgroundAbilities()) {
             this.backgroundAbilities.add(new BackgroundAbilityDTO(ba));
         }
@@ -53,6 +57,10 @@ public class BackgroundDTO {
 
     public String getBackgroundDescription() {
         return backgroundDescription;
+    }
+
+    public String getBackgroundImg() {
+        return backgroundImg;
     }
 
     public List<BackgroundAbilityDTO> getBackgroundAbilities() {

@@ -43,7 +43,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/CA2_Back_End_war_exploded/api/character/user
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/character/user/user
 Content-Type: application/json
 
 ###
@@ -52,7 +52,7 @@ POST http://localhost:8080/CA2_Back_End_war_exploded/api/character
 Content-Type: application/json
 
 {
-  "characterName": "Character Name",
+  "characterName": "John Jackson",
   "characterLevel": 1,
   "characterXp": 1,
   "characterHp": 10,
@@ -149,4 +149,9 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8080/CA2_Back_End_war_exploded/api/background/populate
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/CA2_Back_End_war_exploded/api/background/all
 Content-Type: application/json

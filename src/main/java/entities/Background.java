@@ -35,6 +35,11 @@ public class Background {
     @Column(name = "background_description", columnDefinition="LONGTEXT")
     private String backgroundDescription;
 
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "background_img", columnDefinition="LONGTEXT")
+    private String backgroundImg;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "background")
     private List<Character> characters;
 
@@ -43,16 +48,18 @@ public class Background {
 
     public Background() {}
 
-    public Background(String backgroundName, String backgroundMorale, String backgroundDescription) {
+    public Background(String backgroundName, String backgroundMorale, String backgroundDescription, String backgroundImg) {
         this.backgroundName = backgroundName;
         this.backgroundMorale = backgroundMorale;
         this.backgroundDescription = backgroundDescription;
+        this.backgroundImg = backgroundImg;
     }
 
-    public Background(String backgroundName, String backgroundMorale, String backgroundDescription, List<Character> characters, List<BackgroundAbility> backgroundAbilities) {
+    public Background(String backgroundName, String backgroundMorale, String backgroundDescription, String backgroundImg, List<Character> characters, List<BackgroundAbility> backgroundAbilities) {
         this.backgroundName = backgroundName;
         this.backgroundMorale = backgroundMorale;
         this.backgroundDescription = backgroundDescription;
+        this.backgroundImg = backgroundImg;
         this.characters = characters;
         this.backgroundAbilities = backgroundAbilities;
     }
@@ -71,6 +78,10 @@ public class Background {
 
     public String getBackgroundDescription() {
         return backgroundDescription;
+    }
+
+    public String getBackgroundImg() {
+        return backgroundImg;
     }
 
     public List<Character> getCharacters() {
