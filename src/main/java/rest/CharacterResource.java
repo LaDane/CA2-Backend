@@ -67,3 +67,5 @@ public class CharacterResource {
                 .build();
     }
 }
+
+
