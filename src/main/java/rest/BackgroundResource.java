@@ -29,16 +29,16 @@ public class BackgroundResource {
     @Context
     SecurityContext securityContext;
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("populate")
-    @RolesAllowed("admin")
-    public Response populateBackgrounds() throws NotFoundException {
-        BackgroundPopulator.populateBackgrounds();
-        return Response
-                .ok("SUCCESS")
-                .build();
-    }
+//    @GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    @Path("populate")
+//    @RolesAllowed("admin")
+//    public Response populateBackgrounds() throws NotFoundException {
+//        BackgroundPopulator.populateBackgrounds();
+//        return Response
+//                .ok("SUCCESS")
+//                .build();
+//    }
 
     @Path("all")
     @GET

@@ -10,11 +10,11 @@ import javax.persistence.EntityManagerFactory;
 
 public class BackgroundPopulator {
     public static void main(String[] args) throws NotFoundException {
-        populateBackgrounds();
+        EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
+        populateBackgrounds(emf);
     }
 
-    public static void populateBackgrounds() throws NotFoundException {
-        EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
+    public static void populateBackgrounds(EntityManagerFactory emf) throws NotFoundException {
         BackgroundFacade bFacade = BackgroundFacade.getBackgroundFacade(emf);
         BackgroundAbilityFacade baFacade = BackgroundAbilityFacade.getBackgroundAbilityFacade(emf);
 

@@ -18,11 +18,11 @@ public class CharacterPopulator {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public static void main(String[] args) throws NotFoundException {
-        populateCharacters();
+        EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
+        populateCharacters(emf);
     }
 
-    public static void populateCharacters() throws NotFoundException {
-        EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
+    public static void populateCharacters(EntityManagerFactory emf) throws NotFoundException {
         CharacterFacade cFacade = CharacterFacade.getCharacterFacade(emf);
         BackgroundFacade bFacade = BackgroundFacade.getBackgroundFacade(emf);
 
