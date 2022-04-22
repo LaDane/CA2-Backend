@@ -6,6 +6,7 @@ import dtos.CharacterDTO;
 import errorhandling.NotFoundException;
 import facades.CharacterFacade;
 import utils.EMF_Creator;
+
 import javax.persistence.EntityManagerFactory;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
